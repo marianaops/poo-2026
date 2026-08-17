@@ -21,7 +21,6 @@ class Personagem:
         print(self.nome, "ataca", alvo.nome)
         alvo.receberDano(self.forca)
 
-
 heroi = Personagem("Mulan", 200, 40)
 chefe = Personagem("Thanos", 200, 5)
 
