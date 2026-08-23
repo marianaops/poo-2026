@@ -1,1 +1,77 @@
+class Personagem {
 
+
+    private String nome;
+    private int vida;
+    private int nivel;
+
+   
+    public Personagem(String nome, int vida, int nivel) {
+        setNome(nome);
+        setVida(vida);
+        setNivel(nivel);
+    }
+
+  
+    public String getNome() {
+        return nome;
+    }
+
+    
+    public void setNome(String nome) {
+        if (nome != null  && !nome.trim().isEmpty()) {
+            this.nome = nome;
+        } else {
+            System.out.println("Erro: o nome não pode ser vazio!");
+        }
+    }
+
+ 
+    public int getVida() {
+        return vida;
+    }
+
+    
+    public void setVida(int vida) {
+        if (vida >= 0 && vida <= 100) {
+            this.vida = vida;
+        } else {
+            System.out.println("Erro: a vida deve estar entre 0 e 100!");
+        }
+    }
+
+    
+    public int getNivel() {
+        return nivel;
+    }
+
+
+    public void setNivel(int nivel) {
+        if (nivel >= 1) {
+            this.nivel = nivel;
+        } else {
+            System.out.println("Erro: o nível deve ser no mínimo 1!");
+        }
+    }
+}
+
+
+public class Main {
+    public static void main(String[] args) {
+
+        // Criando o objeto com valores válidos
+        Personagem personagem = new Personagem("Mulan", 80, 5);
+
+        // Mostrando os valores
+        System.out.println("Nome: " + personagem.getNome());
+        System.out.println("Vida: " + personagem.getVida());
+        System.out.println("Nível: " + personagem.getNivel());
+
+
+        // Testando valores inválidos
+        personagem.setVida(150);
+        personagem.setVida(-10);
+        personagem.setNome("");
+        personagem.setNivel(0);
+    }
+}
