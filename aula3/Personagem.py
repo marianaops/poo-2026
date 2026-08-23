@@ -1,34 +1,40 @@
 class Personagem:
 
     def __init__(self, nome, vida, nivel):
-        self.set_nome(nome)
-        self.set_vida(vida)
-        self.set_nivel(nivel)
+        self.nome = nome
+        self.vida = vida
+        self.nivel = nivel
 
-    def get_nome(self):
-        return self.nome
+    @property
+    def nome(self):
+        return self._nome
 
-    def set_nome(self, nome):
+    @nome.setter
+    def nome(self, nome):
         if nome is not None and nome.strip() != "":
-            self.nome = nome
+            self._nome = nome
         else:
             print("Erro: o nome não pode ser vazio!")
 
-    def get_vida(self):
-        return self.vida
+    @property
+    def vida(self):
+        return self._vida
 
-    def set_vida(self, vida):
-        if vida >= 0 and vida <= 100:
-            self.vida = vida
+    @vida.setter
+    def vida(self, vida):
+        if 0 <= vida <= 100:
+            self._vida = vida
         else:
             print("Erro: a vida deve estar entre 0 e 100!")
 
-    def get_nivel(self):
-        return self.nivel
+    @property
+    def nivel(self):
+        return self._nivel
 
-    def set_nivel(self, nivel):
+    @nivel.setter
+    def nivel(self, nivel):
         if nivel >= 1:
-            self.nivel = nivel
+            self._nivel = nivel
         else:
             print("Erro: o nível deve ser no mínimo 1!")
 
@@ -36,12 +42,13 @@ class Personagem:
 
 personagem = Personagem("Mulan", 80, 5)
 
-print("Nome:", personagem.get_nome())
-print("Vida:", personagem.get_vida())
-print("Nível:", personagem.get_nivel())
+
+print("Nome:", personagem.nome)
+print("Vida:", personagem.vida)
+print("Nível:", personagem.nivel)
 
 
-personagem.set_vida(190)
-personagem.set_vida(-80)
-personagem.set_nome("")
-personagem.set_nivel(0)
+personagem.vida = 150
+personagem.vida = -10
+personagem.nome = ""
+personagem.nivel = 0
