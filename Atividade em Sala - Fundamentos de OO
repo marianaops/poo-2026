@@ -1,1 +1,112 @@
+public class Filme {
+
+    private String titulo;
+    private int duracao;
+
+    public Filme() {
+        setTitulo("");
+        setDuracao(0);
+    }
+
+
+    public Filme(String titulo, int duracao ) {
+        setTitulo(titulo);
+        setDuracao(duracao);
+    }
+
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        if (titulo != null && !titulo.isEmpty()) {
+            this.titulo = titulo;
+        } else {
+            System.out.println("Erro: o titulo não pode ser vazio!");
+        }
+    }
+
+ 
+    public int getDuracao() {
+        return duracao;
+    }
+
+    public void setDuracao(int duracao) {
+        if (duracao > 0) {
+            this.duracao = duracao;
+        } else {
+            System.out.println("Duraçao invalida!");
+        }
+    }
+}
+
+public class Ingresso {
+
+    private int numero;
+    private double preco;
+    private Filme filme;
+
+    public Ingresso(int numero, double preco, Filme filme) {
+        setNumero(numero);
+        setPreco(preco);
+        setFilme(filme);
+    }
+
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public void setNumero(int numero) {
+        if (numero > 0) {
+            this.numero = numero;
+        } else {
+            System.out.println("Numero invalido!");
+        }
+    }
+
+ 
+    public double getPreco() {
+        return preco;
+    }
+
+    public void setPreco(double preco) {
+        if (preco > 0) {
+            this.preco = preco;
+        } else {
+            System.out.println("Preço invalida!");
+        }
+    }
+    
+    public Filme getFilme() {
+        return filme;
+    }
+
+    public void setFilme(Filme filme) {
+        if (filme != null) {
+            this.filme = filme;
+        } else {
+            System.out.println("Filme invalido!");
+        }
+    }
+}
+
+public class Main
+{
+	public static void main(String[] args) {
+	    System.out.println("-- Invalidos --");
+
+	    Filme filme1 = new Filme();
+	    Filme filme2 = new Filme("Diario de uma paixão",60);
+	    Ingresso ingresso = new Ingresso(2,100,filme2);
+	    
+	    System.out.println();
+	    System.out.println("-- Válidos --");
+		System.out.println("Filme: "+ filme2.getTitulo());
+		System.out.println("Duração: "+ filme2.getDuracao());
+		System.out.println("Número: "+ ingresso.getNumero());
+		System.out.println("Preço: R$"+ ingresso.getPreco());
+	}
+}
 
