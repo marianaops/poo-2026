@@ -123,9 +123,9 @@ class Guerreiro(Personagem):
     def ficha(self):
         return super().ficha() + "\nDefesa: " + str(self.__defesa)
 
-espada = Item("Espada de Aço", 3)
+espada = Item("machado", 4)
 
-mago = Mago("Elara", 100, 1)
+mago = Mago("Laine", 100, 2)
 
 mago.pegar(espada)
 
@@ -133,9 +133,9 @@ print("----- MAGO -----")
 print(mago.ficha())
 
 
-guerreiro = Guerreiro("Bran", 100, 1)
+guerreiro = Guerreiro("ken", 100, 2)
 
-guerreiro.receber_dano(8)
+guerreiro.receber_dano(6)
 
 print("\n----- GUERREIRO -----")
 print(guerreiro.ficha())
@@ -145,6 +145,6 @@ print("\nVida restante:", guerreiro.get_vida())
 
 print("\n----- TESTANDO MANA -----")
 
-mago.set_mana(-10)
+mago.set_mana(-20)
 
 print("Mana atual do Mago:", mago.get_mana())
