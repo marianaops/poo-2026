@@ -1,3 +1,33 @@
+class Item {
+
+    private String nome;
+    private int bonus;
+
+    public Item(String nome, int bonus) {
+        this.nome = nome;
+        setBonus(bonus);
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public int getBonus() {
+        return bonus;
+    }
+
+    public void setBonus(int bonus) {
+        if (bonus >= 0) {
+            this.bonus = bonus;
+        } else {
+            System.out.println("Bonus não pode ser negativo.");
+        }
+    }
+
+    public String descricao() {
+        return nome + " (+" + bonus + ")";
+    }
+}
 class Personagem {
 
     private String nome;
@@ -85,36 +115,7 @@ class Personagem {
         return resultado;
     }
 }
-class Item {
 
-    private String nome;
-    private int bonus;
-
-    public Item(String nome, int bonus) {
-        this.nome = nome;
-        setBonus(bonus);
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public int getBonus() {
-        return bonus;
-    }
-
-    public void setBonus(int bonus) {
-        if (bonus >= 0) {
-            this.bonus = bonus;
-        } else {
-            System.out.println("Bonus não pode ser negativo.");
-        }
-    }
-
-    public String descricao() {
-        return nome + " (+" + bonus + ")";
-    }
-}
 class Mago extends Personagem {
 
     private int mana;
