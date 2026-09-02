@@ -188,16 +188,16 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Item espada = new Item("Espada de Aço", 3);
+        Item espada = new Item("machado", 4);
 
-        Mago mago = new Mago("Elara", 100, 1);
+        Mago mago = new Mago("Laine", 100, 2);
 
         mago.pegar(espada);
 
         System.out.println("----- MAGO -----");
         System.out.println(mago.ficha());
 
-        Guerreiro guerreiro = new Guerreiro("Bran", 100, 1);
+        Guerreiro guerreiro = new Guerreiro("ken", 100, 2);
 
         guerreiro.receberDano(8);
 
@@ -208,7 +208,7 @@ public class Main {
 
         System.out.println("\n----- TESTANDO MANA -----");
 
-        mago.setMana(-10);
+        mago.setMana(-20);
 
         System.out.println("Mana atual do Mago: " + mago.getMana());
     }
