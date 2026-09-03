@@ -1,7 +1,8 @@
 # Uso de IA:
 # Ferramenta utilizada: ChatGPT.
 # Finalidade: 
-# 
+# Ajudou a mostrar a estrutura do código em Python.
+# Também ajudou a identificar e corrigir possíveis erros.
 # Esclarecer dúvidas sobre classes, herança e classes abstratas.
 # Modificações/validações manuais: revisei o código e conferi seu funcionamento.
 # Tive um pouco de dificuldade com Python, pois tenho mais facilidade e prefiro trabalhar com Java.
