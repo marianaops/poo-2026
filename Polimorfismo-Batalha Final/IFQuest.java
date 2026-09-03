@@ -1,3 +1,23 @@
+/*
+ * REGISTRO DO USO DE FERRAMENTAS DE IA
+ *
+ * - Ferramenta utilizada:
+ *   ChatGPT.
+ *
+ * - Para quê foi utilizada:
+ *   Auxiliar na revisão e compreensão do código Java,
+ *   especialmente conceitos de herança, encapsulamento,
+ *   polimorfismo e classes abstratas.
+ *
+ * - O que foi modificado ou validado manualmente:
+ *   - Verifiquei a estrutura das classes Personagem, Mago,
+ *     Guerreiro e Item.
+ *   - Validei manualmente o uso de getters e setters.
+ *   - Validei a sobrescrita dos métodos habilidade(),
+ *   - Criei do 0 a class chefe.
+ *   - Modifiquei o Main acrescentando a parte do chefe e herói nele.
+ */
+
 import java.util.ArrayList;
 import java.util.List;
 
