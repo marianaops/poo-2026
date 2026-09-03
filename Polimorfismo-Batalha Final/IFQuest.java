@@ -39,7 +39,7 @@ public class Main {
         herois.add(mago);
         herois.add(guerreiro);
 
-        Chefe chefe = new Chefe("Rei Lich");
+        Chefe chefe = new Chefe("João",200,1);
 
         for (Personagem heroi : herois) {
 
@@ -98,10 +98,10 @@ abstract class Personagem {
     }
 
     public void setVida(int vida) {
-        if (vida >= 0 && vida <= 100) {
+        if (vida >= 0 && vida <= 200) {
             this.vida = vida;
         } else {
-            System.out.println("Vida deve estar entre 0 e 100.");
+            System.out.println("Vida deve estar entre 0 e 200.");
         }
     }
 
@@ -299,5 +299,3 @@ class Chefe extends Personagem {
                 ", forca: " + forca + ")";
     }
 }
-
-
