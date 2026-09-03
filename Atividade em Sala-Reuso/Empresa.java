@@ -1,3 +1,27 @@
+/*
+ * Domínio: Empresa
+ *
+ * Superclasse abstrata: Funcionario
+ *
+ * Subclasses: Empregado e Gerente
+ *
+ * Funcionario possui os atributos:
+ * - nome
+ * - tempo
+ *
+ * Empregado possui como atributo próprio:
+ * - codfun (código/matrícula do funcionário)
+ *
+ * Gerente possui como atributo próprio:
+ * - setor
+ *
+ * Método abstrato: cumprirUmaDemanda()
+ *
+ * Método sobrescrito: mostrar()
+ *
+ * Utilizei IA para ajudar na estrutura e compreensão do código.
+ */
+
 abstract class Funcionario {
     protected String nome;
     protected int tempo;
@@ -70,3 +94,18 @@ public class Main {
     }
 }
 
+/*
+ * CRITÉRIOS
+ *
+ * Atingi os critérios de classe abstrata, herança, método abstrato,
+ * sobrescrita e polimorfismo. Não ficou nenhum critério principal sem atender.
+ *
+ * A parte mais difícil foi adaptar Pessoa, Aluno e Professor para
+ * Funcionario, Empregado e Gerente. Resolvi reorganizando as classes
+ * e corrigindo os erros do código.
+ *
+ * A IA ajudou na organização, correção e compreensão do código.
+ * Atrapalhou um pouco quando sugeriu mudanças que não estavam totalmente
+ * de acordo com o que foi pedido, sendo necessário revisar e adaptar.
+ link: https://chatgpt.com/share/6a997429-ded4-83e9-a905-38476e8463e7
+ */
