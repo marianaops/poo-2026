@@ -1,3 +1,14 @@
+/*
+ * Registro de uso de ferramenta de IA (Claude)
+ *
+ * Ferramenta utilizada: Claude
+ * Para quê: ajudar na estrutura do código e em alguns conceitos de
+ * orientação a objetos (herança, exceções personalizadas, blocos
+ * try/catch/finally), além de auxiliar a identificar e corrigir erros
+ * de compilação e avisos.
+ * O que foi modificado/validado manualmente: o código foi revisado,
+ * testado e ajustado manualmente antes da entrega.
+ */
 import java.util.ArrayList;
 import java.util.List;
 
