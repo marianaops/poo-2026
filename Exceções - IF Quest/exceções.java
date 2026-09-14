@@ -18,6 +18,10 @@ public class Main {
         } catch (IllegalArgumentException e) {
 
             System.out.println("Erro ao criar personagem: " + e.getMessage());
+        } finally {
+
+            System.out.println("Fim de turno");
+
         }
 
         Item espada = new Item("machado", 4);
@@ -40,6 +44,10 @@ public class Main {
 
             System.out.println(e.getMessage());
             System.out.println("O Guerreiro não conseguiu realizar o golpe especial.");
+        } finally {
+
+            System.out.println("Fim de turno");
+
         }
 
         guerreiro.receberDano(8);
