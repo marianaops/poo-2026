@@ -1,3 +1,17 @@
+#Registro do uso de Inteligência Artificial:
+#
+#Ferramenta utilizada: ChatGPT
+#
+#Finalidade: Utilizada como ferramenta de apoio para compreender as
+#instruções da atividade, a criação da interface gráfica em Python Tkinter,
+#o uso de Tk, Label, Entry, Button, Frame e dos gerenciadores
+#de layout pack, grid e Frame.
+#
+#Modificações e validações realizadas manualmente: O código foi analisado,
+#adaptado e testado manualmente no VS Code. Foram verificadas a organização
+#das classes, a estrutura da interface, a disposição dos componentes e
+#o funcionamento da execução da janela gráfica.
+
 import tkinter as tk
 from abc import ABC, abstractmethod
 
