@@ -13,17 +13,15 @@
  * das classes, a estrutura da interface, a disposição dos componentes e
  * o funcionamento da execução da janela gráfica.
  */
-import java.util.ArrayList;
-import java.util.List;
-
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JTextField;
-import javax.swing.JButton;
-import javax.swing.JPanel;
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
-import java.awt.FlowLayout;
+import java.util.ArrayList;
+import java.util.List;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
 
 public class Main {
 
@@ -163,23 +161,21 @@ class TelaCriacaoHeroi extends JFrame{
     public TelaCriacaoHeroi(){
         super("IF quest");
         setLayout(new BorderLayout());
-        setSize(400,300);
+        setSize(400,250);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
         JLabel titulo = new JLabel("Criacao de Heroi", JLabel.CENTER);
-
+        titulo.setText("Criacao de Heroi");
         add(titulo, BorderLayout.NORTH);
+        
+        JPanel painel =new JPanel(new GridLayout(3,2,5,5));
 
         JTextField campoNome =new JTextField(15);
         JTextField campoVida =new JTextField(15);
         JTextField campoClasse = new JTextField(15);
 
-        titulo.setText("Criacao de Heroi");
         String nome = campoNome.getText();
 
-
-
-        JPanel painel =new JPanel(new GridLayout(3,2,5,5));
 
         painel.add(new JLabel("Nome:"));
         painel.add(campoNome);
@@ -205,18 +201,27 @@ class TelaCriacaoHeroiFlow extends JFrame {
         setSize(400, 300);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
-        setLayout(new FlowLayout());
+        setLayout(new GridLayout(5,2,5,5));
 
         JLabel titulo = new JLabel("Criação de Heroi");
         JTextField campoNome = new JTextField(15);
         JTextField campoVida = new JTextField(15);
+        JTextField campoClasse = new JTextField(15);
         JButton botaoCriar = new JButton("Criar Heroi");
 
         add(titulo);
+        add(new JLabel(""));
+
         add(new JLabel("Nome:"));
         add(campoNome);
+
         add(new JLabel("Vida:"));
         add(campoVida);
+
+        add(new JLabel("Classe:"));
+        add(campoClasse);
+
+        add(new JLabel(""));
         add(botaoCriar);
     }
 }
