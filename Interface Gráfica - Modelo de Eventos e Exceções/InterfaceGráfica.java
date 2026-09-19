@@ -1,3 +1,30 @@
+/*
+ * REGISTRO DO USO DE INTELIGÊNCIA ARTIFICIAL
+ *
+ * Ferramenta utilizada: ChatGPT (OpenAI)
+ *
+ * Finalidade do uso:
+ * A ferramenta foi utilizada como apoio para identificar e corrigir
+ * problemas no código da criação de heróis, principalmente na interface
+ * gráfica e na diferenciação entre as classes Mago e Guerreiro.
+ *
+ * Modificações realizadas:
+ * - Ajuste do método criarHeroi();
+ * - Implementação da escolha da classe Mago ou Guerreiro;
+ * - Exibição da classe escolhida na criação do herói;
+ * - Exibição das características específicas de cada classe:
+ *   Mana para Mago e Defesa e Força para Guerreiro;
+ * - Organização e correção de partes do código.
+ *
+ * Validação manual:
+ * O código foi analisado, testado e validado manualmente,
+ * verificando o funcionamento da criação dos personagens e as mensagens
+ * apresentadas no programa.
+ *
+ * Conversa utilizada:
+ * ChatGPT - conversa utilizada para auxílio no desenvolvimento e correção
+ * do código.
+ */
 import java.awt.BorderLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
