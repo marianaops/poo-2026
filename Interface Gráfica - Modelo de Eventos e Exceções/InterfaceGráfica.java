@@ -146,19 +146,19 @@ public class Main {
         System.out.println("\n===== CHEFE APÓS OS ATAQUES =====");
         System.out.println(chefe.ficha());
 
-        System.out.println("\n===== CRIAÇÃO =====");
     }
 }
 
 class TelaCriacaoHeroi extends JFrame{
+    
     public TelaCriacaoHeroi(){
         super("IF quest");
         setLayout(new BorderLayout());
         setSize(400,250);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
-        JLabel titulo = new JLabel("Criacao de Heroi", JLabel.CENTER);
-        titulo.setText("Criacao de Heroi");
+        JLabel titulo = new JLabel("Criacao do Heroi", JLabel.CENTER);
+        titulo.setText("Criacao do Heroi");
         add(titulo, BorderLayout.NORTH);
         
         JPanel painel =new JPanel(new GridLayout(3,2,5,5));
@@ -203,7 +203,7 @@ class TelaCriacaoHeroiFlow extends JFrame {
 
         setLayout(new GridLayout(6,2,5,5));
 
-        JLabel titulo = new JLabel("Criação de Heroi");
+        JLabel titulo = new JLabel("Criacao do Heroi");
         campoNome = new JTextField(15);
         campoVida = new JTextField(15);
         campoClasse = new JTextField(15);
@@ -234,27 +234,54 @@ class TelaCriacaoHeroiFlow extends JFrame {
         
     }
     public void criarHeroi() {
-        try {
-            String nome = campoNome.getText();
-            int vida = Integer.parseInt(campoVida.getText());
-    
-            Guerreiro guerreiro = new Guerreiro(nome, 100, 1);
-            guerreiro.setVida(vida);
-            
-            rotuloStatus.setText("Herói " + nome + " criado com vida " + vida + "!");
+    try {
+        String nome = campoNome.getText();
+        int vida = Integer.parseInt(campoVida.getText());
+        String classe = campoClasse.getText();
 
+        if (classe.equalsIgnoreCase("mago")) {
 
-            System.out.println("Herói criado!");
-            System.out.println(guerreiro.ficha());
-    
-        } catch (NumberFormatException e) {
-            JOptionPane.showMessageDialog(this,"Vida deve ser um número!","Erro",JOptionPane.ERROR_MESSAGE);
-    
-        } catch (IllegalArgumentException e) {
-            JOptionPane.showMessageDialog(this,e.getMessage(),"Erro",JOptionPane.ERROR_MESSAGE);
+            Mago mago = new Mago(nome, vida, 1);
+
+            rotuloStatus.setText("Heroi " + nome + " criado com vida " + vida + "!");
+
+            System.out.println("\n===== CRIAÇÃO DO HERÓI =====");
+            System.out.println("Classe: Mago");
+            System.out.println("Nome: " + mago.getNome());
+            System.out.println("Vida: " + mago.getVida());
+            System.out.println("Mana: " + mago.getMana());
+
+        } else if (classe.equalsIgnoreCase("guerreiro")) {
+
+            Guerreiro guerreiro = new Guerreiro(nome, vida, 1);
+
+            rotuloStatus.setText("Heroi " + nome + " criado com vida " + vida + "!");
+
+            System.out.println("\n===== CRIAÇÃO DO HERÓI =====");
+            System.out.println("Classe: Guerreiro");
+            System.out.println("Nome: " + guerreiro.getNome());
+            System.out.println("Vida: " + guerreiro.getVida());
+            System.out.println("Defesa: " + guerreiro.getDefesa());
+            System.out.println("Força: " + guerreiro.getForca());
+
+        } else {
+            JOptionPane.showMessageDialog(
+                this,
+                "A classe deve ser Mago ou Guerreiro!",
+                "Erro",
+                JOptionPane.ERROR_MESSAGE
+            );
         }
-    }
 
+    } catch (NumberFormatException e) {
+
+        JOptionPane.showMessageDialog(this,"Vida deve ser um número!","Erro",JOptionPane.ERROR_MESSAGE);
+
+    } catch (IllegalArgumentException e) {
+
+        JOptionPane.showMessageDialog(this,e.getMessage(), "Erro",JOptionPane.ERROR_MESSAGE);
+    }
+}
     class OuvinteCriar implements ActionListener {
  
         @Override
